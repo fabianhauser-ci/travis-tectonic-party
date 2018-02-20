@@ -1,6 +1,6 @@
-language: rust
-install:
-  - cargo install tectonic
+sudo: required
+services:
+  - docker
 script:
   - ./build.bash
 deploy:
