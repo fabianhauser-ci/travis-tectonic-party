@@ -1,0 +1,12 @@
+language: rust
+install:
+  - cargo install tectonic
+script:
+  - ./build.bash
+deploy:
+  provider: pages
+  local-dir: export/
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
